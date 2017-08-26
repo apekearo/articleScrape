@@ -1,3 +1,11 @@
+$(document).on("click","#scrape",function(){
+	$.get("/scrape", function(){
+		$.get("/", function(){
+
+		});
+	});
+});
+
 $(document).on("click","li",function(){
 	$("#titleInput, #bodyInput").val("");
 	var thisId = $(this).attr("data-id");
