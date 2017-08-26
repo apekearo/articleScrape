@@ -21,7 +21,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://heroku_hl4wm4ff:7onkra1a380nngtg230noj5512@ds159493.mlab.com:59493/heroku_hl4wm4ff");
+mongoose.connect("mongodb://heroku_whb218m9:d61iad37fpsla6tpuaosh1o5sv@ds127429.mlab.com:27429/heroku_whb218m9");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -37,6 +37,6 @@ db.once("open", function() {
 require("./routes/api-routes.js")(app);
 
 // Listen on port 3000
-app.listen(3000, function() {
-  console.log("App running on port 3000!");
+app.listen(port, function() {
+  console.log("App running on port: "+port);
 });
